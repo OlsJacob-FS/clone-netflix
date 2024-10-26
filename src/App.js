@@ -30,6 +30,7 @@ function App() {
         //logged out
         dispatch(logout());
       }
+      console.log(process.env.REACT_APP_FIREBASE_API_KEY);
     });
     return unsubscribe;
   }, [dispatch]);
