@@ -30,7 +30,6 @@ function App() {
         //logged out
         dispatch(logout());
       }
-      console.log(process.env.REACT_APP_FIREBASE_API_KEY);
     });
     return unsubscribe;
   }, [dispatch]);
@@ -42,7 +41,7 @@ function App() {
         ) : (
           <Routes>
             <Route path="/" exact element={<HomeScreen />} />
-            <Route path="/profile" element={<ProfileScreen />} />
+            <Route path="/profile" exact element={<ProfileScreen />} />
           </Routes>
         )}
       </BrowserRouter>
