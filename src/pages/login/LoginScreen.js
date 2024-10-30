@@ -4,7 +4,6 @@ import "./LoginScreen.css";
 //Import Pages:
 import SignUpScreen from "../sigIn/SignUpScreen";
 //Import Images:
-import loginImage from "../../assets/images/Netflix-Login.jpg";
 import netflixLogo from "../../assets/images/netflixLogo.png";
 export default function LoginScreen() {
   const [signIn, setSignIn] = useState(false);
