@@ -1,3 +1,6 @@
 .env
 node_modules
 .firebase
+.build
+.hosting.YnVpbGQ.cache
+node_modules
