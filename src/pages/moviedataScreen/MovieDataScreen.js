@@ -17,7 +17,7 @@ export default function MovieDataScreen() {
         <h1>Title: {title}</h1>
         <h3>Release Date: {releaseDate}</h3>
         <p>
-          <span className="movieScreenSpan">OverView</span>: {overview}
+          <span className="movieScreenSpan">Overview</span>: {overview}
         </p>
       </div>
     </div>

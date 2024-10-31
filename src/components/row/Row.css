@@ -9,7 +9,16 @@
   padding: 20px;
 }
 .row_posters::-webkit-scrollbar {
-  display: none;
+  width: 0.5rem;
+  height: 0.7rem;
+}
+.row_posters::-webkit-scrollbar-track {
+  background: #444646;
+  border-radius: 5px;
+}
+.row_posters::-webkit-scrollbar-thumb {
+  background: #212020;
+  border-radius: 50vw;
 }
 .row_poster {
   max-height: 100px;
