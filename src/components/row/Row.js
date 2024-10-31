@@ -3,10 +3,12 @@ import React, { useEffect, useState } from "react";
 import axios from "../../axios/axios";
 //Import CSS
 import "./Row.css";
+import { useNavigate } from "react-router-dom";
 
 function Row({ title, fetchUrl, isLargeRow = false }) {
   //store movie data from tmdb
   const [movies, setMovies] = useState([]);
+  const navigate = useNavigate();
   //Image base url
   const base_url = "https://image.tmdb.org/t/p/original/";
 
@@ -21,6 +23,17 @@ function Row({ title, fetchUrl, isLargeRow = false }) {
     fetchData();
   }, [fetchUrl]);
 
+  const sendData = (movie) => {
+    navigate("/movie", {
+      state: {
+        title: movie.name || movie.title,
+        image: movie.backdrop_path,
+        releaseDate: movie.release_date,
+        overview: movie.overview,
+      },
+    });
+    console.log(movie);
+  };
   return (
     <div className="row">
       <h2>{title}</h2>
@@ -32,13 +45,16 @@ function Row({ title, fetchUrl, isLargeRow = false }) {
               <img
                 className={`row_poster ${isLargeRow && "row_posterLarge"}`}
                 key={movie.id}
+                placeholder={movie.name}
                 src={`${base_url}${
                   isLargeRow ? movie.poster_path : movie.backdrop_path
                 }`}
                 alt={movie.name}
+                onClick={() => sendData(movie)}
               />
             )
         )}
+        ;
       </div>
     </div>
   );

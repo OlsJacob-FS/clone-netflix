@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is a Netflix clone application built using React.js, Firebase, and Redux. The app allows users to browse movies and shows, as well as manage their watchlists.
+This project is a Netflix clone application built using React.js, Firebase, and Redux. The app allows users to browse movies and shows after setting up their login information.
 
 ## Features
 

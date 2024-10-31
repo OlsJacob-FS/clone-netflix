@@ -10,6 +10,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { auth } from "./firebase";
 import { useDispatch, useSelector } from "react-redux";
 import { login, logout, selectUser } from "./features/userSlice";
+import MovieDataScreen from "./pages/moviedataScreen/MovieDataScreen";
 
 function App() {
   const user = useSelector(selectUser);
@@ -42,6 +43,7 @@ function App() {
           <Routes>
             <Route path="/" exact element={<HomeScreen />} />
             <Route path="/profile" exact element={<ProfileScreen />} />
+            <Route path="/movie" exact element={<MovieDataScreen />} />
           </Routes>
         )}
       </BrowserRouter>
